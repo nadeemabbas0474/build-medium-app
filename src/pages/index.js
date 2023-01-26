@@ -1,16 +1,19 @@
+import Head from "next/head";
 import Banner from "@/components/Banner";
 import { Header } from "@/components/Header";
 import PostCard from "@/components/PostCard/Index";
-import Head from "next/head";
+import { MediumContext } from "@/context/MediumContexxt";
+import { useContext } from "react";
 
 const style = {
   postList:
     "flex flex-col gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3",
   container: "max-w-7xl flex-1",
   main: "flex justify-center",
-  wrapper: 'mx-auto'
+  wrapper: "mx-auto",
 };
 export default function Home() {
+  const { users, posts } = useContext(MediumContext);
   return (
     <>
       <Head>
@@ -25,9 +28,9 @@ export default function Home() {
         <div className={style.main}>
           <div className={style.container}>
             <div className={style.postList}>
-              <PostCard />
-              <PostCard />
-              <PostCard />
+              {posts.map((post) => (
+                <PostCard post={post} key={post.id} />
+              ))}
             </div>
           </div>
         </div>

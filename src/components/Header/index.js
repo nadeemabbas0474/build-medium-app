@@ -15,7 +15,7 @@ export const Header = () =>  {
     <div className={style.wrapper}>
         <div className={style.content}>
             <div className={style.logoContainer}>
-                <Image className={style.logo} src={Logo} width={200} height={20}/>
+                <Image className={style.logo} src={Logo} width={200} height={20} alt="logo"/>
             </div>
             <div className={style.bannerNav}>
               <div>Our Story</div>

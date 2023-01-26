@@ -27,7 +27,9 @@ const style = {
     subtitle: `font-mediumSerifItalic text-[1.4rem] text-[#292929]`,
     articleText: `font-mediumSerif text-[1.4rem] text-[#292929]`,
 };
-export default function MainArticle() {
+export default function MainArticle({post, author}) {
+  console.log( author, "author")
+  console.log(post, "post here")
   return (
     <div className={style.wrapper}>
       <div className={style.content}>
@@ -37,9 +39,12 @@ export default function MainArticle() {
               <Image className={style.image} src={Qazi} alt="author" width={100} height={100} />
             </div>
             <div className={style.column}>
-              <div>Nadeem Abbas</div>
+              <div>{author?.data?.name}</div>
               <div className={style.postDetails}>
-                <span>June 15 • 7 min read •</span>
+                <span>{new Date(post?.data?.postedOn).toLocaleString('en-US', {
+              day: 'numeric',
+              month: 'short',
+            })}</span>
                 <span className={style.listenButton}>
                   <AiFillPlayCircle /> Listen
                 </span>
@@ -67,22 +72,18 @@ export default function MainArticle() {
             />
           </div>
           <h1 className={style.title}>
-            {" "}
-            7 Free Tools That Will Make You More Productive In 2022{" "}
+            {post?.data?.title}
           </h1>
           <h4 className={style.subtitle}>
-            <div>Nadeem Abbas,</div>
-            <div>Brief: Productivity is a skill that can be learned.</div>
+            <div>{author?.data?.name}, {new Date(post?.data?.postedOn).toLocaleString('en-US', {
+              day: 'numeric',
+              month: 'short',
+              year: 'numeric'
+            })}</div>
+            <div>{post?.data?.brief}</div>
           </h4>
           <div className={style.articleText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            accusamus tenetur hic vero repellendus praesentium corrupti commodi
-            expedita deserunt? Similique harum ad numquam ea voluptatum nam
-            molestiae et illum. Consequatur rem reprehenderit quibusdam id autem
-            commodi doloremque doloribus. Neque nam perspiciatis animi
-            reprehenderit ipsa molestiae sunt ab minus consectetur, error
-            exercitationem architecto numquam modi facere odio, dolore at cum
-            totam.
+           {post?.data?.body}
           </div>
         </div>
       </div>
