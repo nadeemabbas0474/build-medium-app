@@ -21,7 +21,7 @@ function Banner() {
           <button className={style.accentedButton}>Start Reading</button>
         </div>
         <div className="hidden h-80 md:inline-flex object-contain p-5">
-          <Image src={Logo.src} width={500} height={400} />
+          <Image src={Logo.src} width={500} height={400} alt="logo"/>
         </div>
       </div>
     </div>

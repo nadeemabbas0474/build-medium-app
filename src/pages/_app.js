@@ -1,5 +1,10 @@
-import '../styles/globals.css';
+import { MediumProvider } from "@/context/MediumContexxt";
+import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <MediumProvider>
+      <Component {...pageProps} />
+    </MediumProvider>
+  );
 }
