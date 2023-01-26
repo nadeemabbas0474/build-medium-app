@@ -14,7 +14,7 @@ const style = {
   wrapper:
     "w-[5rem] h-screen flex flex-col justify-between items-center p-[1rem]",
   iconsContainer:
-    "flex-1 flex flex-col justify-center gap-[1.4rem] text-2xl text-gray-500",
+    "flex-1 flex flex-col justify-center gap-[1.4rem] text-2xl text-gray-500 cursor-pointer",
   divider: "border-b",
   profileImage: "object-cover rounded-full",
   profileImageContainer:
@@ -25,7 +25,7 @@ export default function ReadersNav() {
     <div className={style.wrapper}>
       <Link href="/">
         <div className={style.logoCotainer}>
-          <Image src={SmallLogo} />
+          <Image src={SmallLogo} alt="logo"/>
         </div>
       </Link>
       <div className={style.iconsContainer}>
@@ -37,7 +37,7 @@ export default function ReadersNav() {
           <BsPencilSquare />
       </div>
       <div className={style.profileImageContainer}>
-        <Image className={style.profileImage} src={Qazi} />
+        <Image className={style.profileImage} src={Qazi} alt="readerNav"/>
       </div>
     </div>
   );
