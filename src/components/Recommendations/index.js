@@ -66,7 +66,6 @@ export default function Recommendations() {
         <div className={style.recommendationContainer}>
           <div className={style.title}>More from Medium</div>
           <div className={style.articlesContainer}>
-            {/* {recommendedPosts.map(post => ( */}
               <div className={style.articleContentWrapper}>
                 <div className={style.articleContent}>
                   <div className={style.recommendationAuthorContainer}>
