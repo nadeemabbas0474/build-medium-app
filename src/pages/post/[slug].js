@@ -27,7 +27,7 @@ export default function Post() {
     <div className={style.content}>
       <ReadersNav />
       <MainArticle post={post} author={author} />
-      <Recommendations />
+      <Recommendations author={author}/>
     </div>
   );
 }
