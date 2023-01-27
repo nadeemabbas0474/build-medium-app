@@ -3,7 +3,6 @@ import { MediumContext } from "@/context/MediumContexxt";
 import Image from "next/image";
 import Logo from "../../static/logo1.png";
 import Modal from "react-modal";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import PostModal from "../PostModal";
 
@@ -35,7 +34,6 @@ const style = {
 };
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
   const { user, handleUserAuth } = useContext(MediumContext);
   return (
     <div className={style.wrapper}>
@@ -54,8 +52,12 @@ export const Header = () => {
           <div>MemberShip</div>
           {user ? (
             <>
-                <div className={style.accentedButton} onClick={() => setIsOpen(true)}>Write</div>
-             
+              <div
+                className={style.accentedButton}
+                onClick={() => setIsOpen(true)}
+              >
+                Write
+              </div>
               <div className={style.accentedButton}>
                 <div>Get unlimited access</div>
               </div>
@@ -76,7 +78,7 @@ export const Header = () => {
         style={customStyles}
       >
         <div>
-          <PostModal  onRequestClose={() => setIsOpen(false)}/>
+          <PostModal onRequestClose={() => setIsOpen(false)} />
         </div>
       </Modal>
     </div>

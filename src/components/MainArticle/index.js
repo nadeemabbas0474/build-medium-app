@@ -1,13 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Qazi from "../../static/myImg.jpg";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
 import { FiFacebook, FiMoreHorizontal } from "react-icons/fi";
 import { HiOutlineLink } from "react-icons/hi";
 import { BiBookmarks } from "react-icons/bi";
 import { GrLinkedin } from "react-icons/gr";
-import Banner from "../../static/banner.png";
 
 const style = {
   wrapper: `flex items-center justify-center flex-[3] border-l border-r `,
@@ -28,8 +26,6 @@ const style = {
   articleText: `font-mediumSerif text-[1.4rem] text-[#292929]`,
 };
 export default function MainArticle({ post, author }) {
-  console.log(author, "author");
-  console.log(post, "post here");
   return (
     <div className={style.wrapper}>
       <div className={style.content}>
