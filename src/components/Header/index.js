@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MediumContext } from "@/context/MediumContexxt";
 import Image from "next/image";
 import Logo from "../../static/logo1.png";
 import Modal from "react-modal";
 import { useRouter } from "next/router";
 import PostModal from "../PostModal";
+import ThemeToggler from "@/context/ThemeToggle";
 
 Modal.setAppElement("#__next");
 const customStyles = {
@@ -70,6 +71,7 @@ export const Header = () => {
               </div>
             </>
           )}
+          <ThemeToggler/>
         </div>
       </div>
       <Modal

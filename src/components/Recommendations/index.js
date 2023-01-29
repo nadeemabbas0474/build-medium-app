@@ -13,7 +13,7 @@ const style = {
     authorContainer: `my-[2rem]`,
     authorProfileImageContainer: `h-[5rem] w-[5rem] rounded-full overflow-hidden`,
     authorName: `font-semibold mb-[.2rem] mt-[1rem]`,
-    authorFollowing: `text-[#787878]`,
+    authorFollowing: `text-[#787878] dark:text-white-300`,
     authorActions: `flex gap-[.6rem] my-[1rem]`,
     actionButton: `bg-[#1A8917] text-white rounded-full px-[.6rem] py-[.4rem] text-sm`,
     recommendationContainer: ``,
